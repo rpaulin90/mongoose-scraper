@@ -34,7 +34,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/news_scraper_hw");
+mongoose.connect("mongodb://heroku_hjqqsf1t:d3951on7bivl98a6qmubptr3pv@ds115411.mlab.com:15411/heroku_hjqqsf1t");
 var db = mongoose.connection;
 
 // Show any mongoose errors
