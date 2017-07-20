@@ -183,6 +183,23 @@ app.post("/delete_note", function(req, res) {
 
 });
 
+app.post("/delete_article", function(req, res) {
+
+    Saved.remove({ _id: req.body.id }, function(err, delete_article) {
+        // Send any errors to the browser
+        if (err) {
+            res.send(err);
+        }
+        // Or send the newdoc to the browser
+        else {
+            res.send(delete_article);
+        }
+    });
+
+
+});
+
+
 // Listen on port 3000
 app.listen(PORT, function() {
     console.log("App running on port 3000!");

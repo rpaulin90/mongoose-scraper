@@ -1,6 +1,6 @@
 
 {{#each articles }}
-    <div class="container panel panel-default" style="padding-top: 5px; padding-bottom: 5px">
+    <div class="container panel panel-default" style="padding-top: 5px; padding-bottom: 5px" id="container_{{this._id}}">
         <div class="col-xs-8">{{this.title}}</div>
         <a class="col-xs-2 btn btn-default notes_article" style="background-color: blue; color: white" value="{{this._id}}" data-toggle="modal" data-target="#{{this._id}}">Notes</a>
         <button class="col-xs-2 btn btn-default delete_article" style="background-color: red; color: white" value="{{this._id}}">Delete Article</button>

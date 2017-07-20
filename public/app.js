@@ -87,3 +87,24 @@ $(".delete_note").on("click",function(){
     })
 
 });
+
+$(".delete_article").on("click",function(){
+
+    var article = $(this).attr("value");
+
+    var delete_info = {
+
+        id: article
+
+
+    };
+
+    $.post("/delete_article",delete_info,function(data){
+
+        //alert("article saved: " + data.title);
+
+        $("#container_" + article).css("display","none");
+
+    })
+
+});
